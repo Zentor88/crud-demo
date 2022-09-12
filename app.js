@@ -27,6 +27,10 @@ app.get('/campgrounds', async (req, res) => {
     res.render('campgrounds/index', { campgrounds })
 })
 
+app.get('/campgrounds/:id', async (req, res) => {
+    res.render('campgrounds/show')
+})
+
 app.listen(PORT, ()=> {
     console.log(`Server up on Port ${PORT}`);
 })
